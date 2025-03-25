@@ -150,26 +150,26 @@ button{
     padding: 5px;
     gap: 2px;
 }
-.btn-enviar{
-    width: 50%;
-    background-color: rgb(101, 156, 101);
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 16px;
-    letter-spacing: 1px;
 
-}
 
 .btn-convertir{
     width: 50%;
-    background-color: rgb(152, 96, 96);
+    background-color: #4DF099;
     border-radius: 10px;
     padding: 5px;
     font-size: 16px;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
+.btn-convertir:hover {
+    background-color: #29ef85;
+   
+}
 a {
     text-decoration: none;
 }

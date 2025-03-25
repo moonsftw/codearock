@@ -139,8 +139,8 @@ btnEnviarNombre.addEventListener("click", (evento) => {
 monedaPrincipal.addEventListener("change", () => {
   primeraMoneda.innerText = monedaPrincipal.value;
 });
-monedaSecundaria.addEventListener("change", () => {
-  segundaMoneda.innerText = monedaSecundaria.value;
+monedaSecundaria.addEventListener("change", (evento) => {
+  segundaMoneda.innerText = evento.target.value;
 });
 
 btnBorrar.addEventListener("click", () => {
