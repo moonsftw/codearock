@@ -319,7 +319,9 @@ select {
 .dark-mode .btn:hover{
     background-color: #555;
 }
-
+.dark-mode #valor-actual{
+    color:white;
+}
 .hidden {
     display: none;
 }
