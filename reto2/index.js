@@ -95,7 +95,7 @@ monedaPrincipal.addEventListener("change", () => {
 
   imagenMonedaPrincipal.setAttribute(
     "src",
-    `/img/${monedaPrincipal.value}.svg`
+    `/img/${monedaPrincipal.value}.png`
   );
 });
 monedaSecundaria.addEventListener("change", () => {
@@ -105,7 +105,7 @@ monedaSecundaria.addEventListener("change", () => {
     : "";
   imagenMonedaSecundaria.setAttribute(
     "src",
-    `/img/${monedaSecundaria.value}.svg`
+    `/img/${monedaSecundaria.value}.png`
   );
 });
 
