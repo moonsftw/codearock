@@ -80,7 +80,7 @@ input::placeholder{
     cursor: pointer;
 }
 .btn:active{
-    box-shadow: 3px 2px 5px -3px #00000040, -5px -5px 15px 3px #fafafae5;
+    transform: scale(0.95);
 }
 .btn:focus{
     outline: none;
@@ -181,8 +181,7 @@ button{
     justify-content: center;
     text-align: center;
     
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #fafafae5;
-    
+    box-shadow: 5px 5px 10px -3px #00000040;
 }
 
 .btn-convertir:hover,
@@ -193,7 +192,9 @@ button{
 }
 .btn-convertir:active,
 #btn-nombre:active {
-    box-shadow: 3px 2px 5px -3px #00000040, -5px -5px 15px 3px #fafafae5;
+    transform: scale(0.95);
+
+
 }
 
 #modo-oscuro-toggle {
