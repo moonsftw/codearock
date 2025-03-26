@@ -16,17 +16,19 @@
   </head>
   <body>
     <header>
-      <h2>Gracias por visitar mi sitio 😊</h2>
-      <div>
-        <label for="nombre-ingresado">¿Cómo te llamas?</label>
-        <input
-          type="text"
-          id="nombre-ingresado"
-          name="nombre-ingresado"
-          placeholder="John Doe"
-        />
+      <div class="container-saludo">
+        <h2>Gracias por visitar mi sitio 😊</h2>
+        <div class="container-nombre-ingresado">
+          <label for="nombre-ingresado">¿Cómo te llamas?</label>
+          <input
+            type="text"
+            id="nombre-ingresado"
+            name="nombre-ingresado"
+            placeholder="John Doe"
+          />
+          <button id="btn-nombre">Enviar</button>
+        </div>
       </div>
-      <button id="btn-nombre">Enviar</button>
       <div class="container-saludo-usuario">
         <h3 id="saludo-usuario"></h3>
       </div>
@@ -37,23 +39,25 @@
         <p>De tu monedad local al mundo...</p>
         <div class="elegirDivisa">
           <article>
-            <select
-              id="moneda-principal"
-              aria-placeholder="Selecciona tu moneda"
-            >
-              <option name="" value="">Seleccionar</option>
-              <option name="euro1" value="€">Euro</option>
-              <option name="dolar1" value="U$S">Dólar Americano</option>
-              <option name="peso1" value="$">Peso Argentino</option>
+            <label for="moneda-principal">Moneda de origen</label>
+            <select id="moneda-principal">
+              <option value="">Seleccionar</option>
+              <option value="EUR">Euro</option>
+              <option value="USD">Dólar Americano</option>
+              <option value="ARS">Peso Argentino</option>
             </select>
           </article>
-          <img src="/right-arrow.png" alt="" />
+          <img
+            src="/right-arrow.png"
+            alt="Flecha indicando conversión hacia la derecha"
+          />
           <article>
+            <label for="moneda-secundaria">Moneda destino</label>
             <select id="moneda-secundaria">
-              <option name="" value="">Seleccionar</option>
-              <option name="euro2" value="€">Euro</option>
-              <option name="dolar2" value="U$S">Dólar Americano</option>
-              <option name="peso2 " value="$">Peso Argentino</option>
+              <option value="">Seleccionar</option>
+              <option value="EUR">Euro</option>
+              <option value="USD">Dólar Americano</option>
+              <option value="ARS">Peso Argentino</option>
             </select>
           </article>
         </div>
@@ -68,8 +72,22 @@
             <span id="segunda-moneda"></span>
           </div>
         </div>
-        <p id="display2"></p>
-        <div id="botonera-1">
+        <div class="botonera">
+          <button class="btn numero" value="1">1</button>
+          <button class="btn numero" value="2">2</button>
+          <button class="btn numero" value="3">3</button>
+          <button class="btn numero" value="4">4</button>
+          <button class="btn numero" value="5">5</button>
+          <button class="btn numero" value="6">6</button>
+          <button class="btn numero" value="7">7</button>
+          <button class="btn numero" value="8">8</button>
+          <button class="btn numero" value="9">9</button>
+          <button class="btn numero" value=".">.</button>
+          <button class="btn numero" value="0">0</button>
+          <button class="btn" id="btn-borrar">C</button>
+        </div>
+
+        <!--   <div id="botonera-1">
           <button class="btn numero" id="numero-1" value="1">1</button>
           <button class="btn numero" value="2">2</button>
           <button class="btn numero" value="3">3</button>
@@ -88,14 +106,13 @@
           <button class="btn numero" value=".">.</button>
           <button class="btn numero" value="0">0</button>
           <button class="btn" id="btn-borrar">C</button>
-        </div>
+        </div> -->
         <div class="btn-accion">
           <button class="btn-convertir">Convertir</button>
         </div>
       </section>
     </main>
     <footer>
-      <span id="footer-prueba"></span>
       <a href="https://www.linkedin.com/in/lunafacundo/">
         Hecho con ♥️ por Facundo Luna</a
       >
