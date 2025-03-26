@@ -121,8 +121,9 @@ button{
     justify-content: center;
     align-items: baseline;
 }
-.calculador{
+.calculadora{
     width: 50%;
+   
 }
 .botonera{
     text-align: center;
@@ -226,6 +227,8 @@ select {
     cursor: pointer;
 }
 
-
+.container-nombre-ingresado > label {
+    letter-spacing: 1px;
+}
 
 
