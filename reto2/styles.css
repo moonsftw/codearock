@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
@@ -19,11 +18,12 @@ body{
    
 }
 header, footer {
-    width: 100%;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 20px
 }
 header{
     height: 150px;
@@ -41,9 +41,9 @@ main{
     height: 60vh;
     border: 2px solid #1a1a1a;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #fafafae5;
+    box-shadow: 5px 5px 10px -3px #00000040;
     gap: 20px;
-    padding: 10px
+    padding: 10px;
 
 }
 input {
@@ -54,9 +54,7 @@ input {
 input::placeholder{
     color: #0000002c
 }
-img{
-    width: 15px;
-}
+
 .container-saludo{
     width: 100%;
     display: flex;
@@ -69,10 +67,7 @@ img{
     height: 40px;
     
 }
-.saludo-usuario{
-    height: 100px;
-    border: solid 1px black;
-}
+
 .btn{
     width: 50px;
     height: 50px;
@@ -80,7 +75,7 @@ img{
     margin: 5px;
     font-size: 18px;
     background-color: #fafafae5;
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #fafafae5;
+    box-shadow: 5px 5px 10px -3px #00000040;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -161,18 +156,7 @@ button{
     align-items: center;
     gap: 10px;
 }
-/* #btn-nombre{
-    padding: 5px 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    transition: 0.3s;
-    text-align: center;
-}
-#btn-nombre:hover{
-    background-color: #1a1a1a;
-    color: white;
-} */
+
 .btn-accion{
     width: 100%;
     display: flex;
@@ -210,7 +194,38 @@ button{
 .btn-convertir:active,
 #btn-nombre:active {
     box-shadow: 3px 2px 5px -3px #00000040, -5px -5px 15px 3px #fafafae5;
+}
 
+#modo-oscuro-toggle {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    background-color: #1967d2;
+    color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#modo-oscuro-toggle:hover {
+    background-color: #679be3;
+    color: #1a1a1a;
+}
+
+#modo-oscuro-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Estilos cuando el modo oscuro está activado */
+.dark-mode #modo-oscuro-toggle {
+    background-color: #ffa500;
+    color: #1a1a1a;
 }
 a {
     color: #1a1a1a;
@@ -232,3 +247,37 @@ select {
 }
 
 
+.dark-mode{
+    background-color: #1a1a1a;
+    color: #fafafa;
+}
+
+.dark-mode main, 
+.dark-mode header,
+.dark-mode footer > a{
+    background-color: #2a2a2a;
+    color: #fafafa;
+    box-shadow: none;
+}
+.dark-mode footer > a{
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode .btn{
+    background-color: #333;
+    color: #fafafa;
+    box-shadow: none;
+}
+.dark-mode .btn-convertir,
+.dark-mode #btn-nombre{
+    box-shadow: none;
+}
+
+.dark-mode .btn:hover{
+    background-color: #555;
+}
