@@ -11,6 +11,15 @@ const segundaMoneda = document.getElementById("segunda-moneda");
 const saludo = document.getElementById("saludo-usuario");
 const btnConvertir = document.querySelector(".btn-convertir");
 const btnBorrar = document.getElementById("btn-borrar");
+const btnVolver = document.getElementById("btn-volver");
+const containerPrincipal = document.getElementById("container-main");
+const containerHeader = document.getElementById("container-header");
+const imagenMonedaPrincipal = document.getElementById(
+  "imagen-moneda-principal"
+);
+const imagenMonedaSecundaria = document.getElementById(
+  "imagen-moneda-secundaria"
+);
 
 const botonModoOscuro = document.getElementById("modo-oscuro-toggle");
 
@@ -45,7 +54,7 @@ btnConvertir.addEventListener("click", () => {
   const monedaDestino = monedaSecundaria.value;
 
   if (!monedaOrigen || !monedaDestino) {
-    console.warm("Seleccione ambas monedas");
+    console.log("Seleccione ambas monedas");
     return;
   }
   if (monedaOrigen === monedaDestino) {
@@ -70,6 +79,12 @@ btnEnviarNombre.addEventListener("click", () => {
   if (nombreIngresado.value.trim() !== "") {
     saludo.innerText = `Hola ${nombreIngresado.value}`;
   }
+  containerPrincipal.classList.remove("hidden");
+  containerHeader.classList.add("hidden");
+});
+btnVolver.addEventListener("click", () => {
+  containerPrincipal.classList.add("hidden");
+  containerHeader.classList.remove("hidden");
 });
 
 monedaPrincipal.addEventListener("change", () => {
@@ -77,12 +92,21 @@ monedaPrincipal.addEventListener("change", () => {
   displayValorAnterior.innerText = valorIngresado
     ? `${valorIngresado} ${monedaPrincipal.value}`
     : "";
+
+  imagenMonedaPrincipal.setAttribute(
+    "src",
+    `/img/${monedaPrincipal.value}.svg`
+  );
 });
 monedaSecundaria.addEventListener("change", () => {
   segundaMoneda.innerText = monedaSecundaria.value || "";
   displayValorActual.innerText = monedaSecundaria.value
     ? `0 ${monedaSecundaria.value}`
     : "";
+  imagenMonedaSecundaria.setAttribute(
+    "src",
+    `/img/${monedaSecundaria.value}.svg`
+  );
 });
 
 //Botón para borrar el valor ingresado
@@ -96,7 +120,7 @@ btnBorrar.addEventListener("click", () => {
 
 botonModoOscuro.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
-  botonModoOscuro.innerText = body.classList.contains("dark-mode")
-    ? "☀️ Modo Claro"
-    : "🌙 Modo Oscuro";
+  botonModoOscuro.innerHTML = body.classList.contains("dark-mode")
+    ? `<img src="/img/sun.svg" alt="" />`
+    : `<img src="/img/moon.svg" alt="" />`;
 });

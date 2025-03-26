@@ -8,59 +8,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
-    <header>
-      <button id="modo-oscuro-toggle">🌙 Modo Oscuro</button>
+    <header id="container-header">
       <div class="container-saludo">
-        <h2>Gracias por visitar mi sitio 😊</h2>
+        <div class="title-saludo">
+          <h1 style="font-weight: 400">Gracias por visitar mi sitio</h1>
+        </div>
         <div class="container-nombre-ingresado">
-          <label for="nombre-ingresado">¿Cómo te llamas?</label>
+          <label for="nombre-ingresado" style="font-weight: lighter"
+            >¿Cómo te llamas?</label
+          >
           <input
             type="text"
             id="nombre-ingresado"
             name="nombre-ingresado"
             placeholder="John Doe"
           />
-          <button id="btn-nombre">Enviar</button>
+          <button id="btn-nombre">Ingresar</button>
         </div>
       </div>
-      <div class="container-saludo-usuario">
-        <h3 id="saludo-usuario"></h3>
-      </div>
     </header>
-    <main>
+    <main class="hidden" id="container-main">
       <section class="container-principal">
-        <h1>Calculadora de divisas</h1>
+        <div class="container-saludo-usuario">
+          <h3 id="saludo-usuario" style="font-weight: 300"></h3>
+        </div>
+        <h1 style="font-weight: 400">Calculadora de divisas</h1>
         <p>De tu monedad local al mundo...</p>
         <div class="elegirDivisa">
-          <article>
+          <div class="container-imagen-moneda">
+            <img id="imagen-moneda-principal" src="" alt="" />
+          </div>
+          <article class="container-eleccion-moneda">
             <label for="moneda-principal">Moneda de origen</label>
             <select id="moneda-principal">
               <option value="">Seleccionar</option>
               <option value="EUR">Euro</option>
-              <option value="USD">Dólar Americano</option>
-              <option value="ARS">Peso Argentino</option>
+              <option value="USD">Dólar americano</option>
+              <option value="ARS">Peso argentino</option>
             </select>
           </article>
           <img
             src="/img/right-arrow.svg"
             alt="Flecha indicando conversión hacia la derecha"
           />
-          <article>
+          <article class="container-eleccion-moneda">
             <label for="moneda-secundaria">Moneda destino</label>
             <select id="moneda-secundaria">
               <option value="">Seleccionar</option>
               <option value="EUR">Euro</option>
-              <option value="USD">Dólar Americano</option>
-              <option value="ARS">Peso Argentino</option>
+              <option value="USD">Dólar americano</option>
+              <option value="ARS">Peso argentino</option>
             </select>
           </article>
+          <div class="container-imagen-moneda">
+            <img id="imagen-moneda-secundaria" src="" alt="" />
+          </div>
         </div>
       </section>
       <section class="calculadora">
@@ -89,6 +98,12 @@
         </div>
         <div class="btn-accion">
           <button class="btn-convertir">Convertir</button>
+          <button class="btn-volver" id="btn-volver">Volver</button>
+        </div>
+        <div class="contenedor-toggle">
+          <button id="modo-oscuro-toggle">
+            <img src="/img/moon.svg" alt="" />
+          </button>
         </div>
       </section>
     </main>
