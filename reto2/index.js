@@ -22,7 +22,7 @@ const imagenMonedaSecundaria = document.getElementById(
 );
 
 const botonModoOscuro = document.getElementById("modo-oscuro-toggle");
-
+const mensajeError = document.getElementById("mensaje-error");
 const body = document.body;
 
 let valorIngresado = "";
@@ -80,7 +80,11 @@ btnEnviarNombre.addEventListener("click", () => {
     saludo.innerText = `Hola ${nombreIngresado.value}`;
     containerPrincipal.classList.remove("hidden");
     containerHeader.classList.add("hidden");
+    mensajeError.style.display = "none";
+    nombreIngresado.classList.remove("error");
+    nombreIngresado.value = "";
   } else {
+    mensajeError.style.display = "flex";
     nombreIngresado.classList.add("error");
   }
 });

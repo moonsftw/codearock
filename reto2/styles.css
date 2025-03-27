@@ -7,10 +7,7 @@
 }
 
 body{
-    /* background-image: url('/img/fondo.svg');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: #52743B;
+    background-color: #76A556;
     color: #1a1a1a;
     display: flex;
     flex-direction: column;
@@ -28,11 +25,15 @@ header, footer {
     border-radius: 20px
 }
 header{
-    height: 150px;
+    height: 550px;
 }
 
 footer{
     height: 50px;
+    
+}
+footer > a {
+    color: #35280a;
 }
 main{
     display: flex;
@@ -63,7 +64,10 @@ input::placeholder{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    
+}
+.title-saludo > h1 {
+    padding-bottom: 20px;
 }
 .container-saludo-usuario{
     display:flex;
@@ -105,6 +109,8 @@ button{
     font-size: 16px;
     transition: 0.3s;
     border: 2px solid #F2C14E;
+    letter-spacing: 1px;
+    background-color: #fafafa95;
 }
 
 .elegirDivisa{
@@ -361,7 +367,18 @@ h1{
     justify-content: center;
     letter-spacing: 2px;
 }
+.container-error{
+    height: 20px;
+}
 
+.mensaje-error{
+    display: none;
+    font-weight: 400;
+    font-size: medium;
+    letter-spacing: 1px;
+    transition: all 1s ease-in-out;
+    color: #501513;
+}
 .error {
-    border: 3px solid red;
+    border: 3px solid #501513;
 }
