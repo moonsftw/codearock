@@ -66,8 +66,11 @@ input::placeholder{
     gap: 20px;
 }
 .container-saludo-usuario{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     height: 40px;
-    
+    width: 480px;
 }
 
 .btn{
@@ -97,7 +100,7 @@ button{
     border: none;
 
 }
-#nombre-ingresado{
+.nombre-ingresado{
     padding: 2px 5px;
     font-size: 16px;
     transition: 0.3s;
@@ -110,8 +113,8 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    gap: 5px;
+    padding-top: 35px;
+    gap: 10px;
     font-size: 14px;
 }
 .container-principal{
@@ -142,8 +145,6 @@ button{
     align-items: end;
     text-align: right;
     word-break: break-all;
-
-    
 }
 
 #valor-actual {
@@ -227,7 +228,7 @@ button{
 
 }
 #modo-oscuro-toggle {
-    width: 100px;
+    width: 50px;
     height: 30px;
     font-size: 8px;
     font-weight: bold;
@@ -335,7 +336,7 @@ select {
 }
 
 .contenedor-toggle{
-    width: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,4 +360,8 @@ h1{
     display: flex;
     justify-content: center;
     letter-spacing: 2px;
+}
+
+.error {
+    border: 3px solid red;
 }

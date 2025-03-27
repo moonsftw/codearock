@@ -78,9 +78,11 @@ btnConvertir.addEventListener("click", () => {
 btnEnviarNombre.addEventListener("click", () => {
   if (nombreIngresado.value.trim() !== "") {
     saludo.innerText = `Hola ${nombreIngresado.value}`;
+    containerPrincipal.classList.remove("hidden");
+    containerHeader.classList.add("hidden");
+  } else {
+    nombreIngresado.classList.add("error");
   }
-  containerPrincipal.classList.remove("hidden");
-  containerHeader.classList.add("hidden");
 });
 btnVolver.addEventListener("click", () => {
   containerPrincipal.classList.add("hidden");
