@@ -66,8 +66,12 @@ btnConvertir.addEventListener("click", () => {
   const tasa = tasasConversion[claveConversion];
 
   if (tasa) {
-    const resultado = (parseFloat(valorIngresado) * tasa).toFixed(2);
-    displayValorActual.innerText = `${resultado} ${monedaDestino}`;
+    const resultado = parseFloat(valorIngresado) * tasa;
+
+    const resultadoFormateado =
+      monedaOrigen === "ARS" ? resultado.toFixed(6) : resultado.toFixed(2);
+
+    displayValorActual.innerText = `${resultadoFormateado} ${monedaDestino}`;
   } else {
     console.log("Conversión no definida");
   }
@@ -142,4 +146,10 @@ botonModoOscuro.addEventListener("click", () => {
   botonModoOscuro.innerHTML = body.classList.contains("dark-mode")
     ? `<img src="/img/sun.svg" alt="" />`
     : `<img src="/img/moon.svg" alt="" />`;
+});
+
+nombreIngresado.addEventListener("keydown", (evento) => {
+  if (evento.key === "Enter") {
+    btnEnviarNombre.click(); // Simula el clic en el botón
+  }
 });
