@@ -91,6 +91,19 @@ btnEnviarNombre.addEventListener("click", () => {
 btnVolver.addEventListener("click", () => {
   containerPrincipal.classList.add("hidden");
   containerHeader.classList.remove("hidden");
+
+  // Resetear selects a la opción predeterminada
+  monedaPrincipal.value = "";
+  monedaSecundaria.value = "";
+
+  // Disparar evento "change" para que se actualicen correctamente
+  monedaPrincipal.dispatchEvent(new Event("change"));
+  monedaSecundaria.dispatchEvent(new Event("change"));
+
+  // Resetear los valores en pantalla
+  displayValorAnterior.textContent = "";
+  displayValorActual.textContent = "";
+  valorIngresado = "";
 });
 
 monedaPrincipal.addEventListener("change", () => {
